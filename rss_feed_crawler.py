@@ -19,10 +19,7 @@ for fname in os.listdir(basepath):
                 link = item.find("link").text
                 title = item.find("title").text
                 date = child.find("lastBuildDate").text
-                #print("Date: " + date)
                 description = item.find("description").text
-                #print("Title: " + title)
-                #print("URL: " + link + "\n")
                 filename = "test.csv"
                 strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
                 os.chdir(strPath)
@@ -77,12 +74,7 @@ for fname in os.listdir(basepath):
                 link = item.find("link").text
                 title = item.find("title").text
                 date = item.find("pubDate").text
-                #print("Date: " + date)
                 description = item.find("description").text
-                #print("Title: " + title)
-                #if description is not None:
-                   # print("Description: " + description)
-                #print("URL: " + link + "\n")
                 filename = "test.csv"
                 strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
                 os.chdir(strPath)
@@ -92,7 +84,7 @@ for fname in os.listdir(basepath):
                 txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")
 
 
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/dn'
+basepath = '/Users/felipesepulveda/PycharmProjects/news/data/dn'
 
 print("########### DAGENS NÆRINGSLIV ########### \n")
 
@@ -109,13 +101,13 @@ for fname in os.listdir(basepath):
                 link = item.find("link").text
                 title = item.find("title").text
                 date = child.find("pubDate").text
-                print("Date: " + date)
-                #description = item.find("ns1:description").text
-                print("Title: " + title)
-                #if description is not None:
-                   #print("Description: " + description)
-                print("URL: " + link + "\n")
-                # TODO Create new file here append that information"""
+                filename = "test.csv"
+                strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
+                os.chdir(strPath)
+                txt_out = open(os.path.basename(filename), 'a')
+                if description is not None:
+                    txt_out.write("Description: " + description + "\n")
+                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")
 
 """basepath = '/Users/felipesepulveda/PycharmProjects/news/data/adressa'
 

@@ -1,13 +1,17 @@
 import os
 import xml.etree.ElementTree as ET
+import csv
 
 
 basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/bergens_tidende'
 
-print("########### BERGENS TIDENDE ########### \n")
+print("########### BERGENS TIDENDE - OK ########### \n")
 
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
+
+def items():
+    table = []
+    for fname in os.listdir(basepath):
+        path = os.path.join(basepath, fname)
     if os.path.isdir(path):
         pass
     elif fname != "last_feed.xml":
@@ -20,15 +24,25 @@ for fname in os.listdir(basepath):
                 title = item.find("title").text
                 date = child.find("lastBuildDate").text
                 description = item.find("description").text
-                filename = "test.csv"
-                strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
-                os.chdir(strPath)
-                txt_out = open(os.path.basename(filename), 'a')
-                if description is not None:
-                    txt_out.write("Description: " + description + "\n")
-                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")
+                table.append((date, title, description, link))
+    return table
 
 
+def writer():
+    with open('test.csv', 'a', newline='') as f:
+        fieldnames = ['date', 'title', 'link', 'description']
+        thewriter = csv.DictWriter(f, fieldnames=fieldnames)
+        thewriter.writeheader()
+
+        for item in items():
+            thewriter.writerow({'date': item, 'title': item, 'link': item, 'description': item})
+
+
+def main():
+    writer()
+
+
+main()
 
 """# HER MÅ DET JOBBES LITT MED, HER ER DET BOOLEAN PÅ ABONNERING
 basepath = '/Users/felipesepulveda/PycharmProjects/news/data/bergens_avisen'
@@ -57,9 +71,9 @@ for fname in os.listdir(basepath):
                 # TODO Create new file here append that information"""
 
 
-basepath = '/Users/felipesepulveda/PycharmProjects/news/data/e_24_finans'
+"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/e_24_finans'
 
-print("########### E24 FINANS ########### \n")
+print("########### E24 FINANS - OK ########### \n")
 
 for fname in os.listdir(basepath):
     path = os.path.join(basepath, fname)
@@ -81,12 +95,13 @@ for fname in os.listdir(basepath):
                 txt_out = open(os.path.basename(filename), 'a')
                 if description is not None:
                     txt_out.write("Description: " + description + "\n")
-                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")
+                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")"""
 
 
-basepath = '/Users/felipesepulveda/PycharmProjects/news/data/dn'
+# There is no need for description here. In this RSS feed <Description> has URL's and pictures
+"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/dn'
 
-print("########### DAGENS NÆRINGSLIV ########### \n")
+print("########### DAGENS NÆRINGSLIV - OK ########### \n")
 
 for fname in os.listdir(basepath):
     path = os.path.join(basepath, fname)
@@ -105,13 +120,13 @@ for fname in os.listdir(basepath):
                 strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
                 os.chdir(strPath)
                 txt_out = open(os.path.basename(filename), 'a')
-                if description is not None:
-                    txt_out.write("Description: " + description + "\n")
-                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")
+                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")"""
+
+
 
 """basepath = '/Users/felipesepulveda/PycharmProjects/news/data/adressa'
 
-print("########### ADRESSA ########### \n")
+print("########### ADRESSA - OK ########### \n")
 
 for fname in os.listdir(basepath):
     path = os.path.join(basepath, fname)
@@ -125,15 +140,15 @@ for fname in os.listdir(basepath):
             for item in items:
                 link = item.find("link").text
                 title = item.find("title").text
-                date = child.find("pubDate").text
-                print("Date: " + date)
-                # TODO Fix description
+                date = item.find("pubDate").text
                 description = item.find("description").text
-                print("Title: " + title)
+                filename = "test.csv"
+                strPath = r"/Users/felipesepulveda/PycharmProjects/news/data_copy"
+                os.chdir(strPath)
+                txt_out = open(os.path.basename(filename), 'a')
                 if description is not None:
-                   print("Description: " + description)
-                print("URL: " + link + "\n")
-                # TODO Create new file here append that information"""
+                    txt_out.write("Description: " + description + "\n")
+                txt_out.write("Date: " + date + "\n" + "Title: " + title + "\n" + "URL: " + link + "\n")"""
 
 
 

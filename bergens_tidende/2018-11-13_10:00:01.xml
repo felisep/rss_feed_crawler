@@ -1,9 +1,0 @@
-<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
-  <channel>
-    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
-    <title>bt.no - Bergens Tidende</title>
-    <link>http://www.bt.no</link>
-    <description>Nyheter fra bt.no</description>
-    <lastBuildDate>Tue, 13 Nov 2018 08:59:10 GMT</lastBuildDate>
-    </channel>
-</rss>

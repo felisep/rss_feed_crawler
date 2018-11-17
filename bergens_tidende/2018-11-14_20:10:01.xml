@@ -1,0 +1,24 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 19:09:58 GMT</lastBuildDate>
+    <item>
+      <title>Kritisk for May &#8211; skjebnem&#248;te trekker ut</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/e1r71a/Kritisk-for-May--skjebnemote-trekker-ut#xtor=RSS-3</link>
+      <description>Statsminister Theresa Mays regjeringsm&#248;te om brexitutkastet er langt p&#229; overtid. I Brussel g&#229;r diplomatene bare og venter p&#229; svar. </description>
+      <pubDate>Wed, 14 Nov 2018 19:05:25 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/e1r71a/Kritisk-for-May--skjebnemote-trekker-ut</guid>
+      <enclosure length="19018" type="image/jpg" url="http://bt.mnocdn.no/images/bbcec76b-3824-4391-b09a-428e7ab22aa3?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    <item>
+      <title>D&#248;d person funnet i Aver&#248;y p&#229; Nordm&#248;re</title>
+      <link>https://www.bt.no/nyheter/innenriks/i/9mwpmp/Dod-person-funnet-i-Averoy-pa-Nordmore#xtor=RSS-3</link>
+      <description>Politiet betegner situasjonen som uavklart etter at det er funnet en d&#248;d person i Aver&#248;y kommune p&#229; Nordm&#248;re.</description>
+      <pubDate>Wed, 14 Nov 2018 19:04:53 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/innenriks/i/9mwpmp/Dod-person-funnet-i-Averoy-pa-Nordmore</guid>
+    </item>
+    </channel>
+</rss>

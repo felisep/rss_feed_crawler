@@ -1,0 +1,16 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 19:19:44 GMT</lastBuildDate>
+    <item>
+      <title>Mistenkelig d&#248;dsfall i Aver&#248;y p&#229; Nordm&#248;re</title>
+      <link>https://www.bt.no/nyheter/innenriks/i/9mwpmp/Mistenkelig-dodsfall-i-Averoy-pa-Nordmore#xtor=RSS-3</link>
+      <description>En mann er funnet d&#248;d etter det politiet betegner som en uavklart trusselsituasjon i Aver&#248;y kommune p&#229; Nordm&#248;re. </description>
+      <pubDate>Wed, 14 Nov 2018 19:04:53 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/innenriks/i/9mwpmp/Mistenkelig-dodsfall-i-Averoy-pa-Nordmore</guid>
+    </item>
+    </channel>
+</rss>

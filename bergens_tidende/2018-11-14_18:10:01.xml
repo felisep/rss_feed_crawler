@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 17:09:16 GMT</lastBuildDate>
+    <item>
+      <title>Jeg er jo &#171;bare&#187; en mor</title>
+      <link>https://www.bt.no/btmeninger/debatt/i/Eoed1j/Jeg-er-jo-bare-en-mor#xtor=RSS-3</link>
+      <description>DEBATT: N&#229; skal dere h&#248;yt utdannede mennesker lytte til hva en helt vanlig mor har &#229; si.</description>
+      <pubDate>Wed, 14 Nov 2018 17:00:00 GMT</pubDate>
+      <guid>https://www.bt.no/btmeninger/debatt/i/Eoed1j/Jeg-er-jo-bare-en-mor</guid>
+      <enclosure length="11009" type="image/jpg" url="http://bt.mnocdn.no/images/7ab1139d-3666-41e3-98cb-fa736f213103?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

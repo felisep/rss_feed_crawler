@@ -1,0 +1,16 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Thu, 15 Nov 2018 07:39:48 GMT</lastBuildDate>
+    <item>
+      <title>Sykepleierforbundet: NHO har vedtatt lockout i sykepleierstreiken</title>
+      <link>https://www.bt.no/nyheter/innenriks/i/WLzmbK/Sykepleierforbundet-NHO-har-vedtatt-lockout-i-sykepleierstreiken#xtor=RSS-3</link>
+      <description>Sykepleierforbundet bekrefter at de har mottatt varsel om lockout fra NHO torsdag morgen.</description>
+      <pubDate>Thu, 15 Nov 2018 07:29:44 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/innenriks/i/WLzmbK/Sykepleierforbundet-NHO-har-vedtatt-lockout-i-sykepleierstreiken</guid>
+    </item>
+    </channel>
+</rss>

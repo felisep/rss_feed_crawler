@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 21:29:26 GMT</lastBuildDate>
+    <item>
+      <title>Hilde Onarheim innlagt p&#229; sykehus etter hundebitt</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/9mwpzw/Hilde-Onarheim-innlagt-pa-sykehus-etter-hundebitt#xtor=RSS-3</link>
+      <description>H&#248;yre sin ordf&#248;rerkandidat er innlagt p&#229; Haukeland sykehus som f&#248;lge av komplikasjoner etter et hundebitt. </description>
+      <pubDate>Wed, 14 Nov 2018 21:27:16 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/9mwpzw/Hilde-Onarheim-innlagt-pa-sykehus-etter-hundebitt</guid>
+      <enclosure length="14512" type="image/jpg" url="http://bt.mnocdn.no/images/70ebe961-46a2-4082-998d-5501244fa300?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

@@ -1,0 +1,16 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 12:39:47 GMT</lastBuildDate>
+    <item>
+      <title>Straks: Forsvarsministeren m&#248;ter pressen</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/EorymG/Straks-Forsvarsministeren-moter-pressen#xtor=RSS-3</link>
+      <description>Har m&#248;tt besetningen som var p&#229; &#171;Helge Ingstad&#187; da ulykken skjedde. </description>
+      <pubDate>Wed, 14 Nov 2018 12:27:39 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/EorymG/Straks-Forsvarsministeren-moter-pressen</guid>
+    </item>
+    </channel>
+</rss>

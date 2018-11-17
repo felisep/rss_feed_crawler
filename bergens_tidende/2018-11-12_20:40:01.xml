@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Mon, 12 Nov 2018 19:39:50 GMT</lastBuildDate>
+    <item>
+      <title>Br&#229;ket i Bergensklinikken: Helse Vest forlenger avtalen</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/l127a3/Braket-i-Bergensklinikken-Helse-Vest-forlenger-avtalen#xtor=RSS-3</link>
+      <description>S&#229; lenge Bergensklinikken holder sin del av avtalen, vil de kunne f&#229; penger fra Helse Vest ut 2022.</description>
+      <pubDate>Mon, 12 Nov 2018 19:31:30 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/l127a3/Braket-i-Bergensklinikken-Helse-Vest-forlenger-avtalen</guid>
+      <enclosure length="33652" type="image/jpg" url="http://bt.mnocdn.no/images/ae953b58-809c-4e69-9add-16533e55e63a?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

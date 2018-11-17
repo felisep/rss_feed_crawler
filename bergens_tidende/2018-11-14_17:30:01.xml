@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 16:29:42 GMT</lastBuildDate>
+    <item>
+      <title>Stig Holm&#229;s hadde aldri trodd at regnboken hans skulle bli teater</title>
+      <link>https://www.bt.no/kultur/i/L0R5q9/Stig-Holmas-hadde-aldri-trodd-at-regnboken-hans-skulle-bli-teater#xtor=RSS-3</link>
+      <description>Neste &#229;r blir hans siste roman &#171;Regn&#187; til teater p&#229; DNS.  &#8211;  Jeg skal s&#248;rge for at de ikke k&#248;dder med bergensdialekten, sier forfatteren.</description>
+      <pubDate>Wed, 14 Nov 2018 16:25:46 GMT</pubDate>
+      <guid>https://www.bt.no/kultur/i/L0R5q9/Stig-Holmas-hadde-aldri-trodd-at-regnboken-hans-skulle-bli-teater</guid>
+      <enclosure length="20503" type="image/jpg" url="http://bt.mnocdn.no/images/85a69842-5d1a-4e7f-9ac2-64311d678d37?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

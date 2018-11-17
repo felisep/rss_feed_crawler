@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Tue, 13 Nov 2018 09:49:20 GMT</lastBuildDate>
+    <item>
+      <title>Kystverket: KNM &#171;Helge Ingstad&#187; synker</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/J1exB7/Kystverket-KNM-Helge-Ingstad-synker#xtor=RSS-3</link>
+      <description>Flere vaiere som sikret fregatten skal ha r&#248;ket i l&#248;pet av natten.</description>
+      <pubDate>Tue, 13 Nov 2018 08:43:42 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/J1exB7/Kystverket-KNM-Helge-Ingstad-synker</guid>
+      <enclosure length="31015" type="image/jpg" url="http://bt.mnocdn.no/images/84af3460-3d3d-4f84-a423-b4f1ac8b80eb?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

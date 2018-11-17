@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 23:19:02 GMT</lastBuildDate>
+    <item>
+      <title>Skredet p&#229; Votlo trolig utl&#248;st av flere &#229;rsaker</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/VRJ6P1/Skredet-pa-Votlo-trolig-utlost-av-flere-arsaker#xtor=RSS-3</link>
+      <description>&#8211; Dette har vi p&#229;pekt siden i februar, sier Robert Lillejord, som mistet samboeren i jordskredet p&#229; Votlo. </description>
+      <pubDate>Wed, 14 Nov 2018 23:16:02 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/VRJ6P1/Skredet-pa-Votlo-trolig-utlost-av-flere-arsaker</guid>
+      <enclosure length="34349" type="image/jpg" url="http://bt.mnocdn.no/images/55d81b3b-6bd2-4c23-84ba-1839d558648f?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

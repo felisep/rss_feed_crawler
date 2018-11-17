@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Sat, 17 Nov 2018 13:00:03 GMT</lastBuildDate>
+    <item>
+      <title>Solberg gir millionst&#248;tte til helelektrisk turistskip i Oslofjorden</title>
+      <link>https://www.bt.no/nyheter/innenriks/i/Xw04yB/Solberg-gir-millionstotte-til-helelektrisk-turistskip-i-Oslofjorden#xtor=RSS-3</link>
+      <description>Statsminister Erna Solberg (H) gir 22,7 millioner kroner til Norges andre helelektriske skip som skal trafikkere i Oslofjorden.</description>
+      <pubDate>Sat, 17 Nov 2018 12:49:38 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/innenriks/i/Xw04yB/Solberg-gir-millionstotte-til-helelektrisk-turistskip-i-Oslofjorden</guid>
+      <enclosure length="14761" type="image/jpg" url="http://bt.mnocdn.no/images/fd60a196-6add-4a60-999a-570f7195e690?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

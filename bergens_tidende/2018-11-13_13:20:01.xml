@@ -1,0 +1,17 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Tue, 13 Nov 2018 12:19:05 GMT</lastBuildDate>
+    <item>
+      <title>Brannofre d&#248;de p&#229; flukt fra flammene i California</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/BJPjWG/Brannofre-dode-pa-flukt-fra-flammene-i-California#xtor=RSS-3</link>
+      <description>42 personer er bekreftet omkommet i den d&#248;deligste brannen i Californias historie. Antallet forventes &#229; stige, og de overlevende beskriver grusomme scener.</description>
+      <pubDate>Tue, 13 Nov 2018 07:15:18 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/BJPjWG/Brannofre-dode-pa-flukt-fra-flammene-i-California</guid>
+      <enclosure length="15024" type="image/jpg" url="http://bt.mnocdn.no/images/df3a07c9-d852-4c81-a8a9-c27f252ea459?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

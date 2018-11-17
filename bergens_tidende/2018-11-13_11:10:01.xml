@@ -1,0 +1,16 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Tue, 13 Nov 2018 10:09:17 GMT</lastBuildDate>
+    <item>
+      <title>Forsvaret med siste nytt etter at fregatten sank</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/OnOrPE/Forsvaret-med-siste-nytt-etter-at-fregatten-sank#xtor=RSS-3</link>
+      <description>Sj&#248;forsvaret har kalt inn til pressekonferanse p&#229; Haakonsvern.</description>
+      <pubDate>Tue, 13 Nov 2018 09:59:10 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/OnOrPE/Forsvaret-med-siste-nytt-etter-at-fregatten-sank</guid>
+    </item>
+    </channel>
+</rss>

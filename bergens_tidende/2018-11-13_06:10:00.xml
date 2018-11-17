@@ -1,0 +1,25 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Tue, 13 Nov 2018 05:09:44 GMT</lastBuildDate>
+    <item>
+      <title>Kjem KrF til &#229; d&#248;y?</title>
+      <link>https://www.bt.no/btmeninger/kommentar/i/OnOblb/Kjem-KrF-til-a-doy#xtor=RSS-3</link>
+      <description>Nei.</description>
+      <pubDate>Tue, 13 Nov 2018 04:59:49 GMT</pubDate>
+      <guid>https://www.bt.no/btmeninger/kommentar/i/OnOblb/Kjem-KrF-til-a-doy</guid>
+      <enclosure length="7223" type="image/jpg" url="http://bt.mnocdn.no/images/76d70ffa-7ad9-470a-a17b-1941f749d937?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    <item>
+      <title>Engelsk b&#248;r bli standard i norske farvatn</title>
+      <link>https://www.bt.no/btmeninger/leder/i/A2nd6x/Engelsk-bor-bli-standard-i-norske-farvatn#xtor=RSS-3</link>
+      <description>Ulykka med fregatten KNM &#171;Helge Ingstad&#187; viser at kommunikasjon p&#229; norsk svekkjer tryggleiken langs kysten.</description>
+      <pubDate>Tue, 13 Nov 2018 04:59:40 GMT</pubDate>
+      <guid>https://www.bt.no/btmeninger/leder/i/A2nd6x/Engelsk-bor-bli-standard-i-norske-farvatn</guid>
+      <enclosure length="27708" type="image/jpg" url="http://bt.mnocdn.no/images/1abc4a5f-4b4f-4753-8d19-7e7a9b1bea62?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

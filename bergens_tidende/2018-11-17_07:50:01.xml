@@ -1,0 +1,24 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Sat, 17 Nov 2018 06:49:49 GMT</lastBuildDate>
+    <item>
+      <title>Savnet ub&#229;t med 44 om bord funnet</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/yvwxrg/Savnet-ubat-med-44-om-bord-funnet#xtor=RSS-3</link>
+      <description>Ub&#229;ten ARA San Juan som forsvant 15. november i fjor med et mannskap p&#229; 44 om bord, har blitt funnet, bekrefter den argentinske marinen.</description>
+      <pubDate>Sat, 17 Nov 2018 06:44:44 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/yvwxrg/Savnet-ubat-med-44-om-bord-funnet</guid>
+    </item>
+    <item>
+      <title>71 bekreftet d&#248;de og over 1000 savnet etter California-brann</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/jPek7L/71-bekreftet-dode-og-over-1000-savnet-etter-California-brann#xtor=RSS-3</link>
+      <description>71 personer er bekreftet omkommet og 1011 personer er meldt savnet i den d&#248;deligste brannen i Californias historie, opplyser lokale myndigheter. </description>
+      <pubDate>Sat, 17 Nov 2018 05:50:55 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/jPek7L/71-bekreftet-dode-og-over-1000-savnet-etter-California-brann</guid>
+      <enclosure length="26208" type="image/jpg" url="http://bt.mnocdn.no/images/33de065f-0866-448d-85d4-87ac453dc30b?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

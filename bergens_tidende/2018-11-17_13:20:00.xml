@@ -1,0 +1,16 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Sat, 17 Nov 2018 12:19:42 GMT</lastBuildDate>
+    <item>
+      <title>Stringtruse har skapt protester over hele Irland</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/A2n0A5/Stringtruse-har-skapt-protester-over-hele-Irland#xtor=RSS-3</link>
+      <description>Det er protester over hele Irland etter at en forsvarsadvokat brukte en stringtruse i retten som samtykke-bevis i en voldtektssak.</description>
+      <pubDate>Sat, 17 Nov 2018 12:17:24 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/A2n0A5/Stringtruse-har-skapt-protester-over-hele-Irland</guid>
+    </item>
+    </channel>
+</rss>

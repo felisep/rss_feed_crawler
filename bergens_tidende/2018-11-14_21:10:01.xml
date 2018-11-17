@@ -1,0 +1,33 @@
+<rss xmlns:ns0="http://www.w3.org/2005/Atom" version="2.0">
+  <channel>
+    <ns0:link href="http://www.bt.no/rss" rel="self" type="application/rss+xml" />
+    <title>bt.no - Bergens Tidende</title>
+    <link>http://www.bt.no</link>
+    <description>Nyheter fra bt.no</description>
+    <lastBuildDate>Wed, 14 Nov 2018 20:09:51 GMT</lastBuildDate>
+    <item>
+      <title>Kranglet seg ned fra tronen</title>
+      <link>https://www.bt.no/nyheter/lokalt/i/Eorw83/Kranglet-seg-ned-fra-tronen#xtor=RSS-3</link>
+      <description>Alle var enige om at Sogn og Fjordane skulle ha frontfiguren i nye Vestland Sp. S&#229; br&#248;t krangelen l&#248;s.</description>
+      <pubDate>Wed, 14 Nov 2018 20:01:56 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/lokalt/i/Eorw83/Kranglet-seg-ned-fra-tronen</guid>
+      <enclosure length="20179" type="image/jpg" url="http://bt.mnocdn.no/images/c7ae167b-93b8-45d1-ad2f-995e9b36ec7b?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    <item>
+      <title>Store, vaklande kjempe</title>
+      <link>https://www.bt.no/btmeninger/kommentar/i/vmJ5LX/Store_-vaklande-kjempe#xtor=RSS-3</link>
+      <description>Sogn og Fjordane Senterparti er i ferd med &#229; drible seg sj&#248;lv vekk fr&#229; makta. </description>
+      <pubDate>Wed, 14 Nov 2018 20:01:14 GMT</pubDate>
+      <guid>https://www.bt.no/btmeninger/kommentar/i/vmJ5LX/Store_-vaklande-kjempe</guid>
+      <enclosure length="9176" type="image/jpg" url="http://bt.mnocdn.no/images/39e16414-95bb-45ea-93cf-a9a3420005b7?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    <item>
+      <title>May f&#229;r st&#248;tte i regjeringen - n&#229; venter kamp i Parlamentet</title>
+      <link>https://www.bt.no/nyheter/utenriks/i/L0R4Ap/May-far-stotte-i-regjeringen---na-venter-kamp-i-Parlamentet#xtor=RSS-3</link>
+      <description>Storbritannias regjering st&#248;tter utkastet til brexitavtale, opplyser statsminister Theresa May etter et maratonm&#248;te i Downing Street 10.</description>
+      <pubDate>Wed, 14 Nov 2018 19:26:49 GMT</pubDate>
+      <guid>https://www.bt.no/nyheter/utenriks/i/L0R4Ap/May-far-stotte-i-regjeringen---na-venter-kamp-i-Parlamentet</guid>
+      <enclosure length="16041" type="image/jpg" url="http://bt.mnocdn.no/images/abb50bf5-48a5-4146-b96a-a75b913433d9?fit=crop&amp;h=270&amp;q=80&amp;w=480" />
+    </item>
+    </channel>
+</rss>

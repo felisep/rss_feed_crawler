@@ -4,7 +4,7 @@ import csv
 
 """
 rss_feed_crawler.py iterates through a folder that contains several xml files with RSS feeds from news related articles.
-It rsscreates a csv file with the url, title, date, and description of each article.
+It creates a csv file with the date, title, description, and link of each article.
 """
 
 
@@ -47,6 +47,7 @@ def e24item():
     return table
 
 
+# dnitem method goes through a folder of xml files and returns the tags
 # There is no need for description here. In this RSS feed <Description> has URL's and pictures
 def dnitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/dn'
@@ -82,17 +83,136 @@ def adressaitem():
             title = item.find("title").text
             description = item.find("description").text
             link = item.find("link").text
-            table.append((date, title, description, link))
+            #table.append((date, title, description, link))
     return table
 
 
+def apitem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/aftenposten'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        items = root.find("channel").findall("item")
+        for item in items:
+            date = item.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+def vgitem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/vg'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        items = root.find("channel").findall("item")
+        for item in items:
+            date = item.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+def hagnaritem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data/hagnar'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        for child in root:
+            items = root.find("channel").findall("item")
+        for item in items:
+            date = child.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+def nrkitem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/nrk'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        items = root.find("channel").findall("item")
+        for item in items:
+            date = item.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+def syslaitem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/sysla'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        items = root.find("channel").findall("item")
+        for item in items:
+            date = item.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+# MÅ JOBBES MED
+
+def tuitem():
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/tu'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        if fname != "last_feed.xml":
+            files = ET.parse(os.path.join(basepath, fname))
+        root = files.getroot()
+        for child in root:
+            items = root.find("channel").findall("item")
+        for item in items:
+            date = child.find("pubDate").text
+            title = item.find("title").text
+            description = item.find("description").text
+            link = item.find("link").text
+            #table.append((date, title, description, link))
+    return table
+
+
+# Writer for all the
 def writer():
     # CSV writer for Bergens Tidende
     if not bt_items():
-        print("BT doesn't have any items")
+        print("CSV for BT was not created")
     else:
-        print("########### BERGENS TIDENDE - CSV FILE CREATED ###########")
-        with open('ba.csv', 'w', newline='') as f:
+        print("########### BERGENS TIDENDE - CSV FILE CREATED ###########\n")
+        with open('bt.csv', 'w', newline='') as f:
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
@@ -101,7 +221,7 @@ def writer():
 
     # CSV writer for E24
     if not e24item():
-        print("E24 doesnt have any items")
+        print("CSV for E24 was not created")
     else:
         print("########### E24 - CSV FILE CREATED ###########")
         with open('e24.csv', 'w', newline='') as f:
@@ -113,7 +233,7 @@ def writer():
 
     # CSV writer for DN
     if not dnitem():
-        print("DN doesnt have any items")
+        print("CSV for DN was not created")
     else:
         print("########### DN - CSV FILE CREATED ###########")
         with open('dn.csv', 'w', newline='') as f:
@@ -125,7 +245,7 @@ def writer():
 
     # CSV writer for Adressa
     if not adressaitem():
-        print("DN doesnt have any items")
+        print("CSV for Adressa was not created")
     else:
         print("########### Adressa - CSV FILE CREATED ###########")
         with open('adressa.csv', 'w', newline='') as f:
@@ -133,6 +253,78 @@ def writer():
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
             for date, title, description, link in adressaitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for Aftenposten
+    if not apitem():
+        print("CSV for DN was not created")
+    else:
+        print("########### Aftenposten - CSV FILE CREATED ###########")
+        with open('aftenposten.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in apitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for VG
+    if not vgitem():
+        print("CSV for VG was not created")
+    else:
+        print("########### VG - CSV FILE CREATED ###########")
+        with open('vg.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in vgitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for Hegnar
+    if not hagnaritem():
+        print("CSV for Hegnar was not created")
+    else:
+        print("########### Hegnar - CSV FILE CREATED ###########")
+        with open('hegnar.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in hagnaritem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for NRK
+    if not nrkitem():
+        print("CSV for NRK was not created")
+    else:
+        print("########### NRK - CSV FILE CREATED ###########")
+        with open('nrk.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in nrkitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for TU
+    if not tuitem():
+        print("CSV for TU was not created")
+    else:
+        print("########### TU - CSV FILE CREATED ###########")
+        with open('tu.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in tuitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
+    # CSV writer for SYSLA
+    if not syslaitem():
+        print("CSV for Sysla was not created")
+    else:
+        print("########### Sysla - CSV FILE CREATED ###########")
+        with open('sysla.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in syslaitem():
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
 
@@ -186,151 +378,3 @@ for fname in os.listdir(basepath):
             for item in items:
                 title = item.find("title").text
                 print(title)"""
-
-
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/aftenposten'
-
-print("########### AFTENPOSTEN ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    elif fname != "last_feed.xml":
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                title = item.find("title").text
-                link = item.find("guid").text
-                description = item.find("description").text
-                print("Title: " + title)
-                if description is not None:
-                    print("Description: " + description)
-                print("Link: " + link + "\n")
-
-
-basepath = '/Users/felipesepulveda/PycharmProjects/news/data/vg'
-
-print("########### VG ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    elif fname != "last_feed.xml":
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                link = item.find("link").text
-                title = item.find("title").text
-                date = item.find("pubDate").text
-                print("Date: " + date)
-                description = item.find("description").text
-                print("Title: " + title)
-                if description is not None:
-                    print("Description: " + description)
-                print("URL: " + link + "\n")"""
-            # TODO Create new file here append that information
-
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/hagnar'
-
-print("########### HAGNAR ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    elif fname != "last_feed.xml":
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                link = item.find("link").text
-                title = item.find("title").text
-                date = item.find("pubDate").text
-                print("Date: " + date)
-                description = item.find("description").text
-                print("Title: " + title)
-                if description is not None:
-                    print("Description: " + description)
-                print("URL: " + link + "\n")
-            # TODO Create new file here append that information"""
-
-
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/nrk'
-
-print("########### NRK ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    else:
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                link = item.find("link").text
-                title = item.find("title").text
-                date = item.find("pubDate").text
-                print("Date: " + date)
-                description = item.find("description").text
-                print("Title: " + title)
-                if description is not None:
-                    print("Description: " + description)
-                print("URL: " + link + "\n")
-            # TODO Create new file here append that information"""
-
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/tu'
-
-print("########### TU ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    else:
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                link = item.find("link").text
-                title = item.find("title").text
-                date = item.find("pubDate").text
-                print("Date: " + date)
-                print("Title: " + title)
-                print("URL: " + link + "\n")
-            # TODO Create new file here append that information"""
-
-
-"""basepath = '/Users/felipesepulveda/PycharmProjects/news/data/sysla'
-
-print("########### SYSLA ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    else:
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                link = item.find("link").text
-                title = item.find("title").text
-                date = item.find("pubDate").text
-                print("Date: " + date)
-                description = item.find("description").text
-                print("Title: " + title)
-                if description is not None:
-                    print("Description: " + description)
-                print("URL: " + link + "\n")
-            # TODO Create new file here append that information"""

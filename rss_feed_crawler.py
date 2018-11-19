@@ -1,8 +1,6 @@
 import os
 import xml.etree.ElementTree as ET
 import csv
-import xml.etree.ElementTree as ETree
-from xml import etree
 
 """
 rss_feed_crawler.py iterates through a folder that contains several xml files with RSS feeds from news related articles.
@@ -10,216 +8,9 @@ It creates a csv file with the date, title, description, and link of each articl
 """
 
 
-# bt_items method goes through a folder of xml files and returns the tags
-def bt_items():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/bergens_tidende'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = item.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
-    return table
-
-
-# 234item method goes through a folder of xml files and returns the tags
-def e24item():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/e_24_finans'
-
-    table = []
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            for child in root:
-                items = root.find("channel").findall("item")
-                for item in items:
-                    date = child.find("pubDate").text
-                    title = item.find("title").text
-                    description = item.find("description").text
-                    link = item.find("link").text
-                    #table.append((date, title, description, link))
-    return table
-
-
 # dnitem method goes through a folder of xml files and returns the tags
 # There is no need for description here. In this RSS feed <Description> has URL's and pictures
-def dnitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/dn'
-
-    table = []
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            for child in root:
-                items = root.find("channel").findall("item")
-                for item in items:
-                    date = child.find("pubDate").text
-                    title = item.find("title").text
-                    link = item.find("link").text
-                    #table.append((date, title, link))
-    return table
-
-
-# adressaitem method goes through a folder of xml files and returns the tags
-def adressaitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/adressa'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            for child in root:
-                items = root.find("channel").findall("item")
-                for item in items:
-                    date = child.find("pubDate").text
-                    title = item.find("title").text
-                    description = item.find("description").text
-                    link = item.find("link").text
-                    #table.append((date, title, description, link))
-    return table
-
-
-# apitem method goes through a folder of xml files and returns the tags
-def apitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/aftenposten'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = item.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
-    return table
-
-
-# vgitem method goes through a folder of xml files and returns the tags
-def vgitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/vg'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = item.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
-    return table
-
-
-# hanaritem method goes through a folder of xml files and returns the tags
-def hagnaritem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data/hagnar'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            for child in root:
-                items = root.find("channel").findall("item")
-                for item in items:
-                    date = child.find("pubDate").text
-                    title = item.find("title").text
-                    description = item.find("description").text
-                    link = item.find("link").text
-                    #table.append((date, title, description, link))
-    return table
-
-
-# nrkitem method goes through a folder of xml files and returns the tags
-def nrkitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/nrk'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = item.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
-    return table
-
-
-# syslaitem method goes through a folder of xml files and returns the tags
-def syslaitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/sysla'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        if fname != "last_feed.xml":
-            files = ET.parse(os.path.join(basepath, fname))
-            root = files.getroot()
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = item.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
-    return table
-
-
-# MÅ JOBBES MED
-def tuitem():
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/tu'
-
-    table = []
-
-    for fname in os.listdir(basepath):
-        try:
-            if fname != "last_feed.xml" and fname != ".DS_Store":
-                print(open(os.path.join(basepath, fname)).read())
-                file = ET.parse(os.path.join(basepath, fname))
-                root = file.getroot()
-                items = root.find('channel').findall('item')
-                print(root.find('channel').find('item'))
-                for item in items:
-                    date = item.find("pubDate").text
-                    title = item.find("title").text
-                    description = item.find("description").text
-                    link = item.find("link").text
-                    table.append((date, title, description, link))
-        except Exception as e:
-            print(fname, e)
-    return table
-
-# baitem method goes through a folder of xml files and returns the tags
-def baitem():
-
-    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/bergens_avisen'
+def item(basepath):
 
     table = []
 
@@ -234,43 +25,17 @@ def baitem():
                     title = item.find("title").text
                     description = item.find("description").text
                     link = item.find("link").text
-                    #table.append((date, title, description, link))
+                    table.append((date, title, description, link))
         except Exception as e:
             print(fname, e)
     return table
 
-"""def kpitem():
-
-basepath = '/Users/felipesepulveda/PycharmProjects/news/data/kommunal_rapport'
-
-table = []
-
-for fname in os.listdir(basepath):
-    if fname != "last_feed.xml":
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                title = item.find("title").text
-                print(title)"""
 
 # Writer for all the
 def writer():
-    # CSV writer for Bergens Tidende
-    if not bt_items():
-        print("CSV for BT was not created")
-    else:
-        print("########### BERGENS TIDENDE - CSV FILE CREATED ###########\n")
-        with open('bt.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in bt_items():
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for E24
-    if not e24item():
+    if not item(basepath="./data/e_24_finans"):
         print("CSV for E24 was not created")
     else:
         print("########### E24 - CSV FILE CREATED ###########")
@@ -278,11 +43,11 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in e24item():
+            for date, title, description, link in item(basepath="./data/e_24_finans"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for DN
-    if not dnitem():
+    if not item(basepath="./data/dn"):
         print("CSV for DN was not created")
     else:
         print("########### DN - CSV FILE CREATED ###########")
@@ -290,11 +55,11 @@ def writer():
             fieldnames = ['date', 'title', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, link in dnitem():
+            for date, title, description, link in item(basepath="./data/dn"):
                 writer.writerow({'date': date, 'title': title, 'link': link})
 
     # CSV writer for Adressa
-    if not adressaitem():
+    if not item(basepath="./data/adressa"):
         print("CSV for Adressa was not created")
     else:
         print("########### Adressa - CSV FILE CREATED ###########")
@@ -302,11 +67,11 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in adressaitem():
+            for date, title, description, link in item(basepath="./data/adressa"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for Aftenposten
-    if not apitem():
+    if not item(basepath="./data/aftenposten"):
         print("CSV for DN was not created")
     else:
         print("########### Aftenposten - CSV FILE CREATED ###########")
@@ -314,11 +79,11 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in apitem():
+            for date, title, description, link in item(basepath="./data/aftenposten"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for VG
-    if not vgitem():
+    if not item(basepath="./data/vg"):
         print("CSV for VG was not created")
     else:
         print("########### VG - CSV FILE CREATED ###########")
@@ -326,11 +91,11 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in vgitem():
+            for date, title, description, link in item(basepath="./data/vg"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for Hegnar
-    if not hagnaritem():
+    if not item(basepath="./data/hagnar"):
         print("CSV for Hegnar was not created")
     else:
         print("########### Hegnar - CSV FILE CREATED ###########")
@@ -338,47 +103,35 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in hagnaritem():
+            for date, title, description, link in item(basepath="./data/hagnar"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
-    # CSV writer for NRK
-    if not nrkitem():
+    # CSV writer for Trønderavisa
+    if not item(basepath="./data/trønderavisa"):
         print("CSV for NRK was not created")
     else:
-        print("########### NRK - CSV FILE CREATED ###########")
-        with open('nrk.csv', 'w', newline='') as f:
+        print("########### Trønderavisa - CSV FILE CREATED ###########")
+        with open('trønderavisa.csv', 'w', newline='') as f:
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in nrkitem():
+            for date, title, description, link in item(basepath="./data/trønderavisa"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
-    # CSV writer for SYSLA
-    if not syslaitem():
-        print("CSV for Sysla was not created")
+    # CSV writer for Bergens Tidende
+    if not item(basepath="./data/bergens_tidende"):
+        print("CSV for BT was not created")
     else:
-        print("########### Sysla - CSV FILE CREATED ###########")
-        with open('sysla.csv', 'w', newline='') as f:
+        print("########### BERGENS TIDENDE - CSV FILE CREATED ###########\n")
+        with open('bt.csv', 'w', newline='') as f:
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in syslaitem():
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for TU
-    if not tuitem():
-        print("CSV for TU was not created")
-    else:
-        print("########### TU - CSV FILE CREATED ###########")
-        with open('tu.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in tuitem():
+            for date, title, description, link in item(basepath="./data/bergens_tidende"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
     # CSV writer for BA
-    if not baitem():
+    if not item(basepath="./data/bergens_avisen"):
         print("CSV for BA was not created")
     else:
         print("########### BA - CSV FILE CREATED ###########")
@@ -386,7 +139,7 @@ def writer():
             fieldnames = ['date', 'title', 'description', 'link']
             writer = csv.DictWriter(f, fieldnames=fieldnames)
             writer.writeheader()
-            for date, title, description, link in baitem():
+            for date, title, description, link in item(basepath="./data/bergens_avisen"):
                 writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
 

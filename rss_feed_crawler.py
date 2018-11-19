@@ -1,6 +1,8 @@
 import os
 import xml.etree.ElementTree as ET
 import csv
+import xml.etree.ElementTree as ETree
+from xml import etree
 
 """
 rss_feed_crawler.py iterates through a folder that contains several xml files with RSS feeds from news related articles.
@@ -17,17 +19,18 @@ def bt_items():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        items = root.find("channel").findall("item")
-        for item in items:
-            date = item.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            items = root.find("channel").findall("item")
+            for item in items:
+                date = item.find("pubDate").text
+                title = item.find("title").text
+                description = item.find("description").text
+                link = item.find("link").text
+                #table.append((date, title, description, link))
     return table
 
 
+# 234item method goes through a folder of xml files and returns the tags
 def e24item():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/e_24_finans'
 
@@ -35,15 +38,15 @@ def e24item():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = child.find("pubDate").text
-                title = item.find("title").text
-                description = item.find("description").text
-                link = item.find("link").text
-                #table.append((date, title, description, link))
+            root = files.getroot()
+            for child in root:
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = child.find("pubDate").text
+                    title = item.find("title").text
+                    description = item.find("description").text
+                    link = item.find("link").text
+                    #table.append((date, title, description, link))
     return table
 
 
@@ -56,17 +59,18 @@ def dnitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                date = child.find("pubDate").text
-                title = item.find("title").text
-                link = item.find("link").text
-                #table.append((date, title, link))
+            root = files.getroot()
+            for child in root:
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = child.find("pubDate").text
+                    title = item.find("title").text
+                    link = item.find("link").text
+                    #table.append((date, title, link))
     return table
 
 
+# adressaitem method goes through a folder of xml files and returns the tags
 def adressaitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/adressa'
 
@@ -75,18 +79,19 @@ def adressaitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-        for item in items:
-            date = child.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            for child in root:
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = child.find("pubDate").text
+                    title = item.find("title").text
+                    description = item.find("description").text
+                    link = item.find("link").text
+                    #table.append((date, title, description, link))
     return table
 
 
+# apitem method goes through a folder of xml files and returns the tags
 def apitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/aftenposten'
 
@@ -95,17 +100,18 @@ def apitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        items = root.find("channel").findall("item")
-        for item in items:
-            date = item.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            items = root.find("channel").findall("item")
+            for item in items:
+                date = item.find("pubDate").text
+                title = item.find("title").text
+                description = item.find("description").text
+                link = item.find("link").text
+                #table.append((date, title, description, link))
     return table
 
 
+# vgitem method goes through a folder of xml files and returns the tags
 def vgitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/vg'
 
@@ -114,17 +120,18 @@ def vgitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        items = root.find("channel").findall("item")
-        for item in items:
-            date = item.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            items = root.find("channel").findall("item")
+            for item in items:
+                date = item.find("pubDate").text
+                title = item.find("title").text
+                description = item.find("description").text
+                link = item.find("link").text
+                #table.append((date, title, description, link))
     return table
 
 
+# hanaritem method goes through a folder of xml files and returns the tags
 def hagnaritem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data/hagnar'
 
@@ -133,18 +140,19 @@ def hagnaritem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-        for item in items:
-            date = child.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            for child in root:
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = child.find("pubDate").text
+                    title = item.find("title").text
+                    description = item.find("description").text
+                    link = item.find("link").text
+                    #table.append((date, title, description, link))
     return table
 
 
+# nrkitem method goes through a folder of xml files and returns the tags
 def nrkitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/nrk'
 
@@ -153,17 +161,18 @@ def nrkitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        items = root.find("channel").findall("item")
-        for item in items:
-            date = item.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            items = root.find("channel").findall("item")
+            for item in items:
+                date = item.find("pubDate").text
+                title = item.find("title").text
+                description = item.find("description").text
+                link = item.find("link").text
+                #table.append((date, title, description, link))
     return table
 
 
+# syslaitem method goes through a folder of xml files and returns the tags
 def syslaitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/sysla'
 
@@ -172,19 +181,18 @@ def syslaitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        items = root.find("channel").findall("item")
-        for item in items:
-            date = item.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            items = root.find("channel").findall("item")
+            for item in items:
+                date = item.find("pubDate").text
+                title = item.find("title").text
+                description = item.find("description").text
+                link = item.find("link").text
+                #table.append((date, title, description, link))
     return table
 
 
 # MÅ JOBBES MED
-
 def tuitem():
     basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/tu'
 
@@ -193,20 +201,55 @@ def tuitem():
     for fname in os.listdir(basepath):
         if fname != "last_feed.xml":
             files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-        for item in items:
-            date = child.find("pubDate").text
-            title = item.find("title").text
-            description = item.find("description").text
-            link = item.find("link").text
-            #table.append((date, title, description, link))
+            root = files.getroot()
+            for child in root:
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = child.find("pubDate").text
+                    title = item.find("title").text
+                    description = item.find("description").text
+                    link = item.find("link").text
+                    table.append((date, title, description, link))
+    return table
+
+# baitem method goes through a folder of xml files and returns the tags
+def baitem():
+
+    basepath = '/Users/felipesepulveda/PycharmProjects/news/data_copy/bergens_avisen'
+
+    table = []
+
+    for fname in os.listdir(basepath):
+        try:
+            if fname != "last_feed.xml" and fname != ".DS_Store":
+                files = ET.parse(os.path.join(basepath, fname))
+                root = files.getroot()
+                items = root.find("channel").findall("item")
+                for item in items:
+                    date = item.find("pubDate").text
+                    title = item.find("title").text
+                    description = item.find("description").text
+                    link = item.find("link").text
+                    #table.append((date, title, description, link))
+        except Exception as e:
+            print(fname, e)
     return table
 
 
 # Writer for all the
 def writer():
+    # CSV writer for BA
+    if not baitem():
+        print("CSV for BA was not created")
+    else:
+        print("########### BA - CSV FILE CREATED ###########")
+        with open('ba.csv', 'w', newline='') as f:
+            fieldnames = ['date', 'title', 'description', 'link']
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            for date, title, description, link in baitem():
+                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+
     # CSV writer for Bergens Tidende
     if not bt_items():
         print("CSV for BT was not created")
@@ -334,32 +377,6 @@ def main():
 
 main()
 
-"""# HER MÅ DET JOBBES LITT MED, HER ER DET BOOLEAN PÅ ABONNERING
-basepath = '/Users/felipesepulveda/PycharmProjects/news/data/bergens_avisen'
-
-print("########### BERGENS AVISEN ########### \n")
-
-for fname in os.listdir(basepath):
-    path = os.path.join(basepath, fname)
-    if os.path.isdir(path):
-        pass
-    elif fname != "last_feed.xml":
-        files = ET.parse(os.path.join(basepath, fname))
-        root = files.getroot()
-        for child in root:
-            items = root.find("channel").findall("item")
-            for item in items:
-                #link = item.find("link").text
-                #title = item.find("title").text
-                date = item.find("pubDate").text
-                #description = item.find("description").text
-                print("Date: " + date)
-                #print("Title: " + title)
-                #if description is not None:
-                   # print("Description: " + description)
-                #print("URL: " + link + "\n")
-                # TODO Create new file here append that information
-"""
 
 #HER MÅ DET JOBBES LITT MED
 """basepath = '/Users/felipesepulveda/PycharmProjects/news/data/kommunal_rapport'

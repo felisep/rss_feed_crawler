@@ -8,16 +8,15 @@ It creates a csv file with the date, title, description, and link of each articl
 """
 
 
-# dnitem method goes through a folder of xml files and returns the tags
-# There is no need for description here. In this RSS feed <Description> has URL's and pictures
-def item(basepath):
+#
+def item(folder_dir):
 
     table = []
 
-    for fname in os.listdir(basepath):
+    for fname in os.listdir(folder_dir):
         try:
             if fname != "last_feed.xml" and fname != ".DS_Store":
-                files = ET.parse(os.path.join(basepath, fname))
+                files = ET.parse(os.path.join(folder_dir, fname))
                 root = files.getroot()
                 items = root.find("channel").findall("item")
                 for item in items:
@@ -31,116 +30,28 @@ def item(basepath):
     return table
 
 
-# Writer for all the
+# Writer for all the items creates a new file with name of each file
 def writer():
+    cwd = os.path.dirname(os.path.realpath(__file__))
+    paper_dir = os.path.join(cwd, "data")
 
-    # CSV writer for E24
-    if not item(basepath="./data/e_24_finans"):
-        print("CSV for E24 was not created")
-    else:
-        print("########### E24 - CSV FILE CREATED ###########")
-        with open('e24.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/e_24_finans"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for DN
-    if not item(basepath="./data/dn"):
-        print("CSV for DN was not created")
-    else:
-        print("########### DN - CSV FILE CREATED ###########")
-        with open('dn.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/dn"):
-                writer.writerow({'date': date, 'title': title, 'link': link})
-
-    # CSV writer for Adressa
-    if not item(basepath="./data/adressa"):
-        print("CSV for Adressa was not created")
-    else:
-        print("########### Adressa - CSV FILE CREATED ###########")
-        with open('adressa.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/adressa"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for Aftenposten
-    if not item(basepath="./data/aftenposten"):
-        print("CSV for DN was not created")
-    else:
-        print("########### Aftenposten - CSV FILE CREATED ###########")
-        with open('aftenposten.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/aftenposten"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for VG
-    if not item(basepath="./data/vg"):
-        print("CSV for VG was not created")
-    else:
-        print("########### VG - CSV FILE CREATED ###########")
-        with open('vg.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/vg"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for Hegnar
-    if not item(basepath="./data/hagnar"):
-        print("CSV for Hegnar was not created")
-    else:
-        print("########### Hegnar - CSV FILE CREATED ###########")
-        with open('hegnar.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/hagnar"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for Trønderavisa
-    if not item(basepath="./data/trønderavisa"):
-        print("CSV for NRK was not created")
-    else:
-        print("########### Trønderavisa - CSV FILE CREATED ###########")
-        with open('trønderavisa.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/trønderavisa"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for Bergens Tidende
-    if not item(basepath="./data/bergens_tidende"):
-        print("CSV for BT was not created")
-    else:
-        print("########### BERGENS TIDENDE - CSV FILE CREATED ###########\n")
-        with open('bt.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/bergens_tidende"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
-
-    # CSV writer for BA
-    if not item(basepath="./data/bergens_avisen"):
-        print("CSV for BA was not created")
-    else:
-        print("########### BA - CSV FILE CREATED ###########")
-        with open('ba.csv', 'w', newline='') as f:
-            fieldnames = ['date', 'title', 'description', 'link']
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            for date, title, description, link in item(basepath="./data/bergens_avisen"):
-                writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
+    for folders in os.listdir(paper_dir):
+        if folders != ".DS_Store":
+            folder_dir = os.path.join(paper_dir, folders)
+            if not item(folder_dir):
+                print(folders + " was not created")
+            else:
+                print(folders + " csv file created")
+                csv_dir = os.path.join(cwd, "csv_files")
+                if not os.path.exists(csv_dir):
+                    os.makedirs(csv_dir, exist_ok=True)
+                csv_path = os.path.join(csv_dir, folders)
+                with open(csv_path + '.csv', 'w', newline='') as f:
+                    fieldnames = ['date', 'title', 'description', 'link']
+                    writer = csv.DictWriter(f, fieldnames=fieldnames)
+                    writer.writeheader()
+                    for date, title, description, link in item(folder_dir):
+                        writer.writerow({'date': date, 'title': title, 'description': description, 'link': link})
 
 
 def main():

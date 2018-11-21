@@ -1,3 +1,4 @@
+import io
 import os
 import xml.etree.ElementTree as ET
 import csv
@@ -8,7 +9,8 @@ It creates a csv file with the date, title, description, and link of each articl
 """
 
 
-#
+# item(folder_dir) Retrieves content from elements pubDate, title, description and link returns.
+# if folder name is in folder directory.
 def item(folder_dir):
 
     table = []
@@ -19,18 +21,23 @@ def item(folder_dir):
                 files = ET.parse(os.path.join(folder_dir, fname))
                 root = files.getroot()
                 items = root.find("channel").findall("item")
+                f = io.StringIO("no element found: line 1, column 0")
                 for item in items:
-                    date = item.find("pubDate").text
-                    title = item.find("title").text
-                    description = item.find("description").text
-                    link = item.find("link").text
-                    table.append((date, title, description, link))
+                    if item is f:
+                        pass
+                    else:
+                        date = item.find("pubDate").text
+                        title = item.find("title").text
+                        description = item.find("description").text
+                        link = item.find("link").text
+                        table.append((date, title, description, link))
         except Exception as e:
             print(fname, e)
     return table
 
 
-# Writer for all the items creates a new file with name of each file
+# Writer for all the items. Checks if the folder exist, if not creates folder and add
+# each csv file to the folder with name.
 def writer():
     cwd = os.path.dirname(os.path.realpath(__file__))
     paper_dir = os.path.join(cwd, "data")
@@ -41,7 +48,7 @@ def writer():
             if not item(folder_dir):
                 print(folders + " was not created")
             else:
-                print(folders + " csv file created")
+                #print(folders + " csv file created")
                 csv_dir = os.path.join(cwd, "csv_files")
                 if not os.path.exists(csv_dir):
                     os.makedirs(csv_dir, exist_ok=True)
